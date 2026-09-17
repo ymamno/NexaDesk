@@ -3,6 +3,11 @@ function LoginPage() {
     <div className="login-page">
          {/* Carte contenant le formulaire de connexion */}
     <div className="login-card">
+        {/* Logo de la plateforme */}
+<div className="login-logo">
+  <span>🔷</span>
+  <strong>NEXADESK</strong>
+</div>
       <h1>Bienvenue sur NexaDesk</h1>
       <p>Connectez-vous à votre compte</p>
 

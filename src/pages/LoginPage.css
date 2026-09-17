@@ -22,6 +22,25 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Logo de NexaDesk affiché au-dessus du formulaire */
+.login-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  color: #123b6d;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+/* Symbole graphique du logo */
+.login-logo span {
+  font-size: 24px;
+}
+
 /* Organisation verticale des éléments du formulaire */
 .login-card form {
   display: flex;
@@ -66,6 +85,12 @@
   color: #123b6d;
 }
 
+/* Les labels des champs restent alignés avec le formulaire */
+.login-card form > div label {
+  display: block;
+  margin-bottom: 2px;
+}
+
 /* Bouton principal de connexion */
 .login-card button[type="submit"] {
   width: 100%;
@@ -89,6 +114,8 @@
 /* Effet visuel lorsque la souris passe sur le bouton */
 .login-card button[type="submit"]:hover {
   background-color: #123b6d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(18, 59, 109, 0.18);
 }
 
 /* Petit effet lorsque le bouton est pressé */
@@ -145,12 +172,13 @@
   cursor: pointer;
 }
 
-/* Lien pour récupérer un mot de passe oublié */
+/* Lien permettant de récupérer un mot de passe oublié */
 .forgot-password {
   align-self: center;
 
   color: #1769aa;
   font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
 
   transition: color 0.2s;
@@ -184,4 +212,35 @@
 .create-account a:hover {
   color: #123b6d;
   text-decoration: underline;
+}
+
+/* Titre principal de la page de connexion */
+.login-card h1 {
+  margin: 0 0 8px;
+
+  color: #123b6d;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Texte explicatif situé sous le titre */
+.login-card > p {
+  margin: 0 0 28px;
+
+  color: #667085;
+  font-size: 15px;
+  text-align: center;
+}
+/* Adaptation de la carte sur les petits écrans */
+@media (max-width: 480px) {
+  .login-card {
+    max-width: none;
+    margin: 16px;
+    padding: 28px 22px;
+  }
+
+  .login-card h1 {
+    font-size: 24px;
+  }
 }
