@@ -1,0 +1,187 @@
+/* Conteneur principal de la page de connexion */
+.login-page {
+  min-height: 100vh;
+  background-color: #f6f8fb;
+
+  /* Flexbox permet de centrer le contenu horizontalement et verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carte blanche qui contient le formulaire de connexion */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+
+  background-color: #ffffff;
+  border-radius: 12px;
+
+  /* Petite ombre pour donner un effet de profondeur */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Organisation verticale des éléments du formulaire */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Groupe contenant le label et le champ de saisie */
+.login-card form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Apparence des champs Email et Mot de passe */
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+
+  border: 1px solid #d5dce5;
+  border-radius: 8px;
+
+  font-size: 15px;
+  box-sizing: border-box;
+
+  /* Transition douce lorsque le champ reçoit le focus */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Apparence du champ lorsqu'on clique dessus */
+.login-card input[type="email"]:focus,
+.login-card input[type="password"]:focus {
+  outline: none;
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+/* Style des textes qui indiquent ce que l'utilisateur doit saisir */
+.login-card label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #123b6d;
+}
+
+/* Bouton principal de connexion */
+.login-card button[type="submit"] {
+  width: 100%;
+  padding: 13px 16px;
+
+  background-color: #1769aa;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  /* Transition douce lors du survol */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Effet visuel lorsque la souris passe sur le bouton */
+.login-card button[type="submit"]:hover {
+  background-color: #123b6d;
+}
+
+/* Petit effet lorsque le bouton est pressé */
+.login-card button[type="submit"]:active {
+  transform: scale(0.98);
+}
+/* Bouton principal de connexion */
+.login-card button[type="submit"] {
+  width: 100%;
+  padding: 13px 16px;
+
+  background-color: #1769aa;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  /* Transition douce lors du survol */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Effet lorsque la souris passe sur le bouton */
+.login-card button[type="submit"]:hover {
+  background-color: #123b6d;
+}
+
+/* Petit effet lorsque le bouton est pressé */
+.login-card button[type="submit"]:active {
+  transform: scale(0.98);
+}
+/* Organisation de la case « Se souvenir de moi » */
+.remember-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a5568;
+
+  cursor: pointer;
+}
+
+/* Taille de la case à cocher */
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Lien pour récupérer un mot de passe oublié */
+.forgot-password {
+  align-self: center;
+
+  color: #1769aa;
+  font-size: 14px;
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+/* Le lien devient plus foncé au survol */
+.forgot-password:hover {
+  color: #123b6d;
+  text-decoration: underline;
+}
+
+/* Texte situé sous le formulaire de connexion */
+.create-account {
+  margin: 0;
+  text-align: center;
+
+  color: #4a5568;
+  font-size: 14px;
+}
+
+/* Lien permettant de créer un nouveau compte */
+.create-account a {
+  color: #1769aa;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+/* Effet au survol du lien */
+.create-account a:hover {
+  color: #123b6d;
+  text-decoration: underline;
+}
