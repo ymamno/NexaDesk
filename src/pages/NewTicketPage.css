@@ -1,0 +1,172 @@
+/* Conteneur principal de la page */
+.new-ticket-page {
+  min-height: 100vh;
+  padding: 32px;
+  background-color: #f6f8fb;
+}
+
+/* En-tête de la page */
+.new-ticket-header {
+  margin-bottom: 28px;
+}
+
+/* Titre principal */
+.new-ticket-header h1 {
+  margin: 0 0 8px;
+  color: #123b6d;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Description sous le titre */
+.new-ticket-header p {
+  max-width: 650px;
+  margin: 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Carte contenant le formulaire */
+.new-ticket-card {
+  max-width: 800px;
+  padding: 28px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Organisation du formulaire */
+.new-ticket-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Groupe contenant un label et son champ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels des champs */
+.form-group label {
+  color: #123b6d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Champs texte, sélection et description */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d5dce5;
+  border-radius: 8px;
+
+  color: #344054;
+  font-family: inherit;
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Permet de redimensionner uniquement la hauteur de la description */
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Effet lorsqu'un champ reçoit le focus */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+/* Zone contenant les deux boutons */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  padding-top: 8px;
+}
+
+/* Style commun des boutons */
+.form-actions button {
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+/* Bouton Annuler */
+.cancel-button {
+  background-color: #ffffff;
+  color: #344054;
+
+  border: 1px solid #d5dce5;
+}
+
+/* Effet au survol du bouton Annuler */
+.cancel-button:hover {
+  background-color: #f8fafc;
+}
+
+/* Bouton principal de création */
+.submit-button {
+  background-color: #1769aa;
+  color: #ffffff;
+
+  border: 1px solid #1769aa;
+}
+
+/* Effet au survol du bouton principal */
+.submit-button:hover {
+  background-color: #123b6d;
+  border-color: #123b6d;
+  transform: translateY(-1px);
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 600px) {
+  .new-ticket-page {
+    padding: 20px;
+  }
+
+  .new-ticket-header h1 {
+    font-size: 24px;
+  }
+
+  .new-ticket-card {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}

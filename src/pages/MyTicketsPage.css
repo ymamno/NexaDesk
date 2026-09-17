@@ -1,0 +1,220 @@
+/* Conteneur principal de la page « Mes demandes » */
+.my-tickets-page {
+  min-height: 100vh;
+  padding: 32px;
+  background-color: #f6f8fb;
+}
+
+/* En-tête contenant le titre et le bouton */
+.my-tickets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+/* Titre principal */
+.my-tickets-header h1 {
+  margin: 0 0 8px;
+  color: #123b6d;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Description sous le titre */
+.my-tickets-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 15px;
+}
+
+/* Bouton « Nouvelle demande » */
+.my-tickets-header button {
+  padding: 12px 18px;
+
+  background-color: #1769aa;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Effet au survol du bouton */
+.my-tickets-header button:hover {
+  background-color: #123b6d;
+  transform: translateY(-1px);
+}
+
+/* Zone contenant la recherche et les filtres */
+.tickets-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+/* Champs de recherche et listes déroulantes */
+.tickets-filters input,
+.tickets-filters select {
+  width: 100%;
+  padding: 12px 14px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d5dce5;
+  border-radius: 8px;
+
+  color: #344054;
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+
+/* Effet lorsqu'un champ reçoit le focus */
+.tickets-filters input:focus,
+.tickets-filters select:focus {
+  outline: none;
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+/* Carte contenant la liste des tickets */
+.tickets-list {
+  padding: 24px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* En-tête de la section */
+.section-header {
+  margin-bottom: 20px;
+}
+
+/* Titre de la section */
+.section-header h2 {
+  margin: 0 0 6px;
+
+  color: #123b6d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Nombre de demandes */
+.section-header p {
+  margin: 0;
+
+  color: #667085;
+  font-size: 14px;
+}
+
+/* Permet au tableau de rester utilisable sur les petits écrans */
+.tickets-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Tableau des demandes */
+.tickets-table table {
+  width: 100%;
+  min-width: 700px;
+
+  border-collapse: collapse;
+}
+
+/* Cellules du tableau */
+.tickets-table th,
+.tickets-table td {
+  padding: 14px 12px;
+
+  border-bottom: 1px solid #eaecf0;
+
+  text-align: left;
+  font-size: 14px;
+}
+
+/* En-tête du tableau */
+.tickets-table th {
+  color: #667085;
+  background-color: #f8fafc;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Contenu du tableau */
+.tickets-table td {
+  color: #344054;
+}
+
+/* Numéro du ticket */
+.tickets-table td:first-child {
+  color: #1769aa;
+  font-weight: 600;
+}
+
+/* Effet lorsque la souris passe sur une demande */
+.tickets-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Adaptation pour les écrans moyens */
+@media (max-width: 900px) {
+  .tickets-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-tickets-header {
+    align-items: flex-start;
+  }
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 600px) {
+  .my-tickets-page {
+    padding: 20px;
+  }
+
+  .my-tickets-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .my-tickets-header h1 {
+    font-size: 24px;
+  }
+
+  .my-tickets-header button {
+    width: 100%;
+  }
+
+  .tickets-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .tickets-list {
+    padding: 18px;
+  }
+}
+/* Indique visuellement que les tickets peuvent être ouverts */
+.tickets-table tbody tr {
+  cursor: pointer;
+}
+
+.tickets-table tbody tr:hover {
+  background-color: #f0f6fc;
+}

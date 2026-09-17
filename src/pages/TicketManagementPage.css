@@ -1,0 +1,259 @@
+/* Mise en page générale de la page de gestion des tickets */
+.ticket-management-page {
+  min-height: 100%;
+  padding: 32px;
+  background-color: #f6f8fb;
+}
+
+/* En-tête de la page */
+.ticket-management-header {
+  margin-bottom: 28px;
+}
+
+.ticket-management-header h1 {
+  margin: 0;
+  color: #123b6d;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.ticket-management-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* Carte principale contenant la liste des tickets */
+.ticket-management-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* En-tête de la section */
+.ticket-management-card .section-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ticket-management-card .section-header h2 {
+  margin: 0;
+  color: #123b6d;
+  font-size: 18px;
+}
+
+.ticket-management-card .section-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Permet au tableau de rester utilisable sur un petit écran */
+.management-table {
+  overflow-x: auto;
+}
+
+.management-table table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+}
+
+.management-table th,
+.management-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.management-table th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.management-table td {
+  color: #334155;
+  font-size: 14px;
+}
+
+.management-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+/* Indique que chaque ligne peut être ouverte */
+.management-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.management-table tbody tr:hover {
+  background-color: #f0f6fc;
+}
+
+/* Zone regroupant la recherche et les filtres */
+.ticket-management-card .management-search,
+.ticket-management-card .management-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Libellés des champs de recherche et de filtre */
+.ticket-management-card .management-search label,
+.ticket-management-card .management-filter label {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Champ de recherche et menus déroulants */
+.ticket-management-card .management-search input,
+.ticket-management-card .management-filter select {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 14px;
+}
+
+/* Met en évidence le champ lorsqu'il est sélectionné */
+.ticket-management-card .management-search input:focus,
+.ticket-management-card .management-filter select:focus {
+  outline: none;
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+/* Organise la recherche et les filtres sur une même ligne */
+.management-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Adaptation pour les écrans plus petits */
+@media (max-width: 900px) {
+  .management-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Adaptation pour les téléphones */
+@media (max-width: 600px) {
+  .management-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Message affiché lorsqu'aucun ticket ne correspond aux filtres */
+.management-table .empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  color: #64748b;
+}
+
+/* Titre du message d'état vide */
+.management-table .empty-state strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #123b6d;
+  font-size: 16px;
+}
+
+/* Explication sous le titre */
+.management-table .empty-state span {
+  display: block;
+  font-size: 14px;
+}
+
+/* Bouton permettant d'ouvrir le détail d'un ticket */
+.management-table .view-ticket-button {
+  padding: 7px 12px;
+  border: 1px solid #1769aa;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1769aa;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* État au survol du bouton */
+.management-table .view-ticket-button:hover {
+  background-color: #1769aa;
+  color: #ffffff;
+}
+
+/* Badge général utilisé pour afficher le statut d'un ticket */
+.management-table .status-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Ticket ouvert */
+.management-table .status-ouvert {
+  background-color: #e8f1fb;
+  color: #1769aa;
+}
+
+/* Ticket en cours */
+.management-table .status-en-cours {
+  background-color: #fff4d6;
+  color: #9a6700;
+}
+
+/* Ticket résolu */
+.management-table .status-résolu {
+  background-color: #e8f7ee;
+  color: #217a45;
+}
+
+/* Ticket fermé */
+.management-table .status-fermé {
+  background-color: #eef2f6;
+  color: #475569;
+}
+
+/* Badge général utilisé pour afficher la priorité d'un ticket */
+.management-table .priority-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Priorité faible */
+.management-table .priority-faible {
+  background-color: #eef2f6;
+  color: #475569;
+}
+
+/* Priorité moyenne */
+.management-table .priority-moyenne {
+  background-color: #fff4d6;
+  color: #9a6700;
+}
+
+/* Priorité haute */
+.management-table .priority-haute {
+  background-color: #fff0e6;
+  color: #b45309;
+}
+
+/* Priorité critique */
+.management-table .priority-critique {
+  background-color: #fde8e8;
+  color: #b42318;
+}
